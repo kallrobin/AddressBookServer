@@ -20,7 +20,7 @@ public class ServerProtocol {
                     if (reader.hasNextLine()){
                         theOutput += reader.nextLine().replaceAll(",", " ") + "\n";
                     } else {
-                        theOutput += "End of file";
+                        theOutput += "";
                         break;
                     }
                 }

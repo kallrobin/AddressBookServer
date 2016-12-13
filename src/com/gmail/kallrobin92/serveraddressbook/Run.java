@@ -6,17 +6,19 @@ package com.gmail.kallrobin92.serveraddressbook;
  */
 public class Run {
     public static void main(String[] args) {
-        System.out.println("Server start");
         new Thread(() -> {
             while (true) {
+                System.out.println("Server start");
                 new Server(61616, "centralAddressBook.txt");
+                System.out.println("Server end");
             }
         }).start();
         new Thread(() -> {
             while (true) {
-                new Server(60606, "centralAddressBook2.txt");
+                System.out.println("Server start");
+                new Server(60606, "centralAddressBo ok2.txt");
+                System.out.println("Server end");
             }
         }).start();
-        System.out.println("Server end");
     }
 }
