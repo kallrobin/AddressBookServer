@@ -28,7 +28,7 @@ public class Server {
                     BufferedReader fromClient = new BufferedReader(
                             new InputStreamReader(clientSocket.getInputStream()))) {
 
-                System.out.println("Server with port: " + portNumber + " started");
+                System.out.println("Session with port: " + portNumber + " started");
 
                 String inputLine, outputLine;
 
@@ -39,7 +39,8 @@ public class Server {
                     toClient.println(outputLine);
                     if (outputLine.equals("Closing connection.")) break;
                 }
-                System.out.println("Server with port: " + portNumber + " ended");
+                System.out.println("Session with port: " + portNumber + " ended ");
+                serverSocket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
