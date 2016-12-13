@@ -16,7 +16,7 @@ public class Run {
         new Thread(() -> {
             while (true) {
                 System.out.println("Server start");
-                new Server(60606, "centralAddressBo ok2.txt");
+                new Server(60606, "centralAddressBook2.txt");
                 System.out.println("Server end");
             }
         }).start();
